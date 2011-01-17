@@ -14,14 +14,10 @@ body {
 .menu_item {
 	font-family: Arial, Helvetica, sans-serif;
 	color:#FFF;
+	
 }
 .subscript {	font-family: Arial, Helvetica, sans-serif;
 font-size:12px;
-color:#000000;
-}
-.bigtitle {	font-family: Arial, Helvetica, sans-serif;
-font-size:34px;
-letter-spacing:-.1em;
 color:#000000;
 }
 .smalltitle {	font-family: Arial, Helvetica, sans-serif;
@@ -53,13 +49,26 @@ font-size:12px;
 letter-spacing:0em;
 color:#000000;
 }
+.bigtitle {	font-family: Arial, Helvetica, sans-serif;
+font-size:34px;
+letter-spacing:-.1em;
+color:#000000;
+}
+
+#menulink a:hover{
+	color:#60F; text-decoration:none;}
+#menulink a:link{
+	color:#FFF; text-decoration:none;}
+#menulink a:hover{color:#90F;}
+#menulink a:active{color:#FFF;}
+
 </style>
 </head>
 
 <body>
 <table width="962" border="0" align="center" cellpadding="1" cellspacing="0">
   <tr>
-    <td bgcolor="#000000"><table width="960" border="0
+    <td align="left" valign="middle" bgcolor="#000000"><table width="960" border="0
 " align="center" cellpadding="0" cellspacing="0">
       <tr>
         <td height="66" align="left" valign="top" bgcolor="#cccccc" class="menu_item"><table width="960" border="0" cellpadding="0" cellspacing="0">
@@ -80,49 +89,57 @@ color:#000000;
       </tr>
       <tr>
         <td height="37" bgcolor="#000000"><table width="590" border="0" cellpadding="0" cellspacing="0">
-          <tr class="menu_item">
-            <td width="62" height="21" align="center" valign="middle" class="menu_item1"><strong>Home</strong></td>
-            <td width="107" align="center" valign="middle"><strong>Interests</strong></td>
-            <td width="72" align="center" valign="middle"><strong>Health</strong></td>
-            <td width="113" align="center" valign="middle"><strong>Academic</strong></td>
-            <td width="114" align="center" valign="middle"><strong>Professional</strong></td>
-            <td width="72" align="center" valign="middle"><strong>Fun</strong></td>
-            <td width="50" align="center" valign="middle"><p><strong>Evil</strong></p></td>
+          <tr class="menu_item" id="menulink">
+            <td width="62" height="21" align="center" valign="middle" class="menu_item1" ><strong><a href="#" title="Yours, not ours.">Home</a></strong></td>
+            <td width="107" align="center" valign="middle"><strong><a href="#" title="If applicable.">Interests</a></strong></td>
+            <td width="72" align="center" valign="middle"><strong><a href="#" title="Smokers need not bother.">Health</a></strong></td>
+            <td width="113" align="center" valign="middle"><strong><a href="#" title="Educational discounts abound.">Academic</a></strong></td>
+            <td width="114" align="center" valign="middle"><strong><a href="#" title="For those who HAVE a job.">Professional</a></strong></td>
+            <td width="72" align="center" valign="middle"><strong><a href="#" title="See &quot;Evil&quot;.">Fun</a></strong></td>
+            <td width="50" align="center" valign="middle"><strong><a href="#" title="See &quot;Fun&quot;.">Evil</a></strong></td>
           </tr>
         </table></td>
       </tr>
       <tr>
-        <td height="217" align="left" valign="top" bgcolor="#fcfcfc" class="bigtitle"><table width="960" border="0" cellpadding="5" cellspacing="0">
+        <td height="217" align="left" valign="top" bgcolor="#fcfcfc"><table width="960" border="0" cellpadding="5" cellspacing="0">
           <tr>
-            <td width="592" align="left" valign="top"><p><strong class="lefttext_title">Lorem Ipsum Dolor Sit Amet.</strong>              </p>
-              <table width="457" border="0" cellpadding="5" cellspacing="0">
+            <td width="592" align="left" valign="top"><table width="592" border="0" cellpadding="0" cellspacing="0">
                 <tr>
-                  <td width="196" height="38" align="left" valign="top"><strong class="lefttext">How do you feel today?</strong></td>
-                  <td width="241" align="left" valign="top"><label for="feel_today"></label>
-                    <input type="text" name="feel_today" id="feel_today"></td>
+                  <td height="45" align="left" valign="top"><strong class="lefttext_title">Lorem Ipsum Dolor Sit Amet.</strong></td>
                 </tr>
                 <tr>
-                  <td height="69" align="left" valign="top"><p><strong class="lefttext">How would you like to feel?<br>
-                    (choose all that apply)
-                  </strong></p></td>
-                  <td align="left" valign="top"><label for="like_to_feel"></label>
-                    <textarea name="like_to_feel" cols="30" rows="4" class="menutext" id="like_to_feel">Comfortably numb
-Grumpy as poop, you jerk
-Happy like I'm on controlled substances
-Normal.  Absolutely Normal.</textarea></td>
+                  <td><table width="500" border="0" cellpadding="5" cellspacing="0">
+                    <tr>
+                      <td width="200" height="38" align="left" valign="top"><strong class="lefttext">How do you feel today?</strong></td>
+                      <td align="left" valign="top"><label for="feel_today2"></label>
+                        <input type="text" name="feel_today" id="feel_today2"></td>
+                    </tr>
+                    <tr>
+                      <td height="69" align="left" valign="top"><strong class="lefttext">How would you like to feel?<br>
+                        (choose all that apply) </strong></td>
+                      <td align="left" valign="top"><label for="like_to_feel"></label>
+                        <label for="feel_list"></label>
+                        <select name="feel_list" size="4" multiple id="feel_list">
+                          <option>Comfortably numb</option>
+                          <option>Grumpy as poop, you jerk</option>
+                          <option>Happy like I'm on controlled substances</option>
+                          <option>Normal.  Absolutely Normal.</option>
+                        </select></td>
+                    </tr>
+                    <tr>
+                      <td align="left" valign="top">&nbsp;</td>
+                      <td align="left" valign="top"><input type="submit" name="fell_button" id="fell_button" value="Feel me!"></td>
+                    </tr>
+                  </table></td>
                 </tr>
-                <tr>
-                  <td align="left" valign="top">&nbsp;</td>
-                  <td align="left" valign="top"><input type="submit" name="fell_button" id="fell_button" value="Feel me!"></td>
-                </tr>
-              </table></td>
+            </table></td>
             <td width="348" align="left" valign="top"><table width="340" border="0" cellpadding="5" cellspacing="0">
               <tr></tr>
               <tr>
-                <td height="40" align="left" valign="top" bgcolor="#eff0ff" class="righttext_title"><p><strong>Current Progress in Life</strong></p></td>
+                <td height="40" align="left" valign="top" bgcolor="#f0f0ff" class="righttext_title"><strong>Current Progress in Life</strong></td>
               </tr>
               <tr>
-                <td height="45" bgcolor="#eff0ff" class="righttext"><p><strong>Mediocre. You really should enjoy life more.</strong></p></td>
+                <td height="45" bgcolor="#f0f0ff" class="righttext"><strong>Mediocre. You really should enjoy life more.</strong></td>
               </tr>
             </table></td>
           </tr>
