@@ -17,6 +17,41 @@ body {
 }
 .subscript {	font-family: Arial, Helvetica, sans-serif;
 font-size:12px;
+color:#000000;
+}
+.bigtitle {	font-family: Arial, Helvetica, sans-serif;
+font-size:34px;
+letter-spacing:-.2em;
+color:#000000;
+}
+.smalltitle {	font-family: Arial, Helvetica, sans-serif;
+font-size:12px;
+color:#66666f;
+}
+.righttext_title {	font-family: Arial, Helvetica, sans-serif;
+font-size:18px;
+letter-spacing:0em;
+color:#000000;
+}
+.righttext {	font-family: Arial, Helvetica, sans-serif;
+font-size:15px;
+letter-spacing:0em;
+color:#000000;
+}
+.lefttext_title {	font-family: Arial, Helvetica, sans-serif;
+font-size:24px;
+letter-spacing:0em;
+color:#000000;
+}
+.lefttext {	font-family: Arial, Helvetica, sans-serif;
+font-size:15px;
+letter-spacing:0em;
+color:#000000;
+}
+.menutext {	font-family: Arial, Helvetica, sans-serif;
+font-size:12px;
+letter-spacing:0em;
+color:#000000;
 }
 </style>
 </head>
@@ -27,7 +62,21 @@ font-size:12px;
     <td bgcolor="#000000"><table width="960" border="0
 " align="center" cellpadding="0" cellspacing="0">
       <tr>
-        <td height="66" bgcolor="#cccccc" class="menu_item"><p>&nbsp;</p></td>
+        <td height="66" align="left" valign="top" bgcolor="#cccccc" class="menu_item"><table width="960" border="0" cellpadding="0" cellspacing="0">
+          <tr>
+            <td width="5"></td>
+            <td height="5"></td>
+          </tr>
+          <tr>
+            <td width="5">&nbsp;</td>
+            <td><strong class="bigtitle">The Magic Life Figure-Outer!</strong></td>
+          </tr>
+          <tr>
+            <td width="5">&nbsp;</td>
+            <td><span class="smalltitle"><strong>&nbsp;Figuring out your life for you, so you don't have to...<br>
+            </strong></span></td>
+          </tr>
+        </table></td>
       </tr>
       <tr>
         <td height="37" bgcolor="#000000"><table width="590" border="0" cellpadding="0" cellspacing="0">
@@ -43,7 +92,41 @@ font-size:12px;
         </table></td>
       </tr>
       <tr>
-        <td height="217" align="center" bgcolor="#fcfcfc" class="subscript">&nbsp;</td>
+        <td height="217" align="left" valign="top" bgcolor="#fcfcfc" class="bigtitle"><table width="960" border="0" cellpadding="5" cellspacing="0">
+          <tr>
+            <td width="592" align="left" valign="top"><p><strong class="lefttext_title">Lorem Ipsum Dolor Sit Amet.</strong>              </p>
+              <table width="457" border="0" cellpadding="5" cellspacing="0">
+                <tr>
+                  <td width="196" height="38" align="left" valign="top"><strong class="lefttext">How do you feel today?</strong></td>
+                  <td width="241" align="left" valign="top"><label for="feel_today"></label>
+                    <input type="text" name="feel_today" id="feel_today"></td>
+                </tr>
+                <tr>
+                  <td height="69" align="left" valign="top"><p><strong class="lefttext">How would you like to feel?<br>
+                    (choose all that apply)
+                  </strong></p></td>
+                  <td align="left" valign="top"><label for="like_to_feel"></label>
+                    <textarea name="like_to_feel" cols="30" rows="4" class="menutext" id="like_to_feel">Comfortably numb
+Grumpy as poop, you jerk
+Happy like I'm on controlled substances
+Normal.  Absolutely Normal.</textarea></td>
+                </tr>
+                <tr>
+                  <td align="left" valign="top">&nbsp;</td>
+                  <td align="left" valign="top"><input type="submit" name="fell_button" id="fell_button" value="Feel me!"></td>
+                </tr>
+              </table></td>
+            <td width="348" align="left" valign="top"><table width="340" border="0" cellpadding="5" cellspacing="0">
+              <tr></tr>
+              <tr>
+                <td height="40" align="left" valign="top" bgcolor="#eff0ff" class="righttext_title"><p><strong>Current Progress in Life</strong></p></td>
+              </tr>
+              <tr>
+                <td height="45" bgcolor="#eff0ff" class="righttext"><p><strong>Mediocre. You really should enjoy life more.</strong></p></td>
+              </tr>
+            </table></td>
+          </tr>
+        </table></td>
       </tr>
       <tr>
         <td height="33" align="center" valign="middle" bgcolor="#f0f0f0"><strong class="subscript">© 2011 Borg-Like Monstrosity of Mind Control, Inc. All rights reserved.</strong></td>
