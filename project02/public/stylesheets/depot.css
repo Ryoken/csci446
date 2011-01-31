@@ -56,13 +56,13 @@ h1 {
 
 /* An entry in the store catalog */
 
-#store  .entry {
+#store .entry {
   overflow: auto;
   margin-top: 1em;
   border-bottom: 1px dotted #77d;
 }
 
-#store  .title {
+#store .title {
   font-size: 120%;
   font-family: sans-serif;
 }
@@ -71,7 +71,6 @@ h1 {
   width: 75px;
   float: left;
 }
-
 
 #store .entry h3 {
  margin-top: 0;
