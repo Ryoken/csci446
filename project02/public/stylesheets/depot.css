@@ -192,6 +192,11 @@ h1 {
 	font: bold smaler sans-serif;
 	}
 
+.locale {
+	float: right;
+	padding-top: 0.2em;
+	}
+
 /* Styles for main cart page */
 
 .cart-title {
