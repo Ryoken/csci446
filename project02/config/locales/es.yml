@@ -1,8 +1,33 @@
 es:
-	layout:
-		title: "Publicaciones de Pragmatic"
-		side:
-			home: "Inicio"
-			questions: "Preguntas"
-			news: "Noticias"
-			contact: "Contacto"
+  layout:
+    title: "Publicaciones de Pragmatic"
+    side:
+      home: "Inicio"
+      questions: "Preguntas"
+      news: "Noticias"
+      contact: "Contacto"
+    cart:
+      title: "Carrito de la Compra"
+      button:
+        empty: "Vaciar carrito"
+        checkout: "Comprar"
+  main:
+    title: "Su Cat&aacute;logo de Pragmatic"
+    button:
+      add: "A&ntilde;adir al Carrito"
+  number:
+    currency:
+      format:
+        unit: "$US"
+        precision: 2
+        separator: "."
+        deliminator: ","
+        format: "%n&nbsp;%u"
+  checkout:
+    legend: "Por favor, introduzca sus datos"
+    name: "Nombre"
+    address: "Direcci&oacute;n"
+    email: "E-Mail"
+    pay_type: "Pagar con"
+    pay_prompt: "Seleccione un m\xC3\xA9todo de pago"
+    submit: "Realizar Pedido"

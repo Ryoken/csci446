@@ -1,8 +1,36 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See http://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
 en:
-	layout:
-		title: "Pragmatic Bookshelf"
-		side:
-			home: "Home"
-			questions: "Questions"
-			news: "News"
-			contact: "Contact"
+  layout:
+    title: "Pragmatic Bookshelf"
+    side:
+      home: "Home"
+      questions: "Questions"
+      news: "News"
+      contact: "Contact"
+    cart:
+      title: "Your Cart"
+      button:
+        empty: "Empty cart"
+        checkout: "Checkout"
+  main:
+    title: "Your Pragmatic Catalog"
+    button:
+      add: "Add to Cart"
+  number:
+    currency:
+      format:
+        unit: "$"
+        precision: 2
+        separator: "."
+        deliminator: ","
+        format: "%u%n"
+  checkout:
+    legend: "Please Enter Your Details"
+    name: "Name"
+    address: "Address"
+    email: "E-Mail"
+    pay_type: "Pay with"
+    pay_prompt: "Select a payment method"
+    submit: "Place Order"
