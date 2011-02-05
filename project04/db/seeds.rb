@@ -97,4 +97,8 @@ Article.create(:edits => 0, :created => "Tuesday, Feb. 15 2011",
 	:author => "Test Author Fifteen",
 	:body =>
 	"Test article fifteen.")
-
+	
+Quote.create(:text => "... my cousin works for Bit.ly")
+Quote.create(:text => "... not just for the country of Spain")
+Quote.create(:text => "... what's \"Article\" in Spanish, anyway?")
+Quote.create(:text => "... with a name .com hipsters love!")

@@ -10,7 +10,6 @@
 			<th>Body</th>
 			<th>Created</th>
 		</tr>
-		
 	<% @articles.each do |article| %>
 		<tr class="<%= cycle('list_odd', 'list_even') %>">
 		<td><%=h article.title %></td>

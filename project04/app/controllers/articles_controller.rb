@@ -1,4 +1,4 @@
-class ArticlesController < ApplicationController
+class ArticlesController < ApplicationController	
   # GET /articles
   # GET /articles.xml
   def index

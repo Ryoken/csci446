@@ -1,4 +1,4 @@
 <div id="header">
 	<h1>Articl.es</h1>
-	Quote here
+	<%= Quote.find(:first, :offset => rand(Quote.count)).text %>
 </div>
