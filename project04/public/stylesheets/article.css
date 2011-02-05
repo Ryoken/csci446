@@ -95,3 +95,35 @@ padding-top: 20px;
 font-size: 40px;
 font-style: normal;
 }
+
+#article_show {
+text-align: left;
+width: 910px;
+margin-left: auto;
+margin-right: auto;
+}
+
+#article_show a {
+text-decoration: none;
+color: #aaaaaa;
+}
+
+#article_show a:hover {
+color: #000000;
+}
+
+#article_body{
+text-align: justify;
+width: 800px;
+margin-left: auto;
+margin-right: auto;
+}
+
+#article_show_author {
+font-size: 10px;
+line-height: 0px;
+}
+
+#article_show h2 {
+line-height: 0px;
+}
