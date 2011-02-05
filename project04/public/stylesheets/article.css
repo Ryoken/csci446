@@ -7,19 +7,44 @@ text-align: left;
 width: 910px;
 margin-left: auto;
 margin-right: auto;
-overflow: auto;
+overflow: none;
 }
 
-#article_list_titles .title   {width: 150px; padding: 0px 0px 0px 5px;}
-#article_list .title          {width: 150px; padding: 0px 0px 0px 5px;}
+#article_list_titles .title {
+width: 150px;
+padding: 0px 5px 0px 5px;
+}
 
-#article_list_titles .author  {width: 150px; padding: 0px 0px 0px 15px;}
-#article_list .author         {width: 150px; padding: 0px 0px 0px 15px;}
+#article_list .title {
+width: 150px;
+padding: 0px 5px 0px 5px;
+}
 
-#article_list_titles .created {width: 180px; padding: 0px 0px 0px 15px;}
-#article_list .created        {width: 180px; padding: 0px 0px 0px 15px;}
+#article_list_titles .author {
+width: 150px;
+padding: 0px 0px 0px 15px;
+}
 
-#article_list .link           {width: 15px; padding: 0px 5px 0px 0px;}
+#article_list .author {
+width: 150px;
+padding: 0px 0px 0px 15px;
+}
+
+#article_list_titles .created {
+width: 180px;
+padding: 0px 0px 0px 15px;
+}
+
+#article_list .created {
+width: 180px;
+padding: 0px 0px 0px 15px;
+}
+
+#article_list .link {
+width: 15px;
+padding: 0px 4px 0px 1px;
+background: #FFFFFF;
+}
 
 #article_list_titles table {
 border-collapse: collapse;
@@ -28,12 +53,11 @@ background: #BBBBBB;
 }
 
 #article_list {
-height: 300px;
+max-height: 300px;
 width: 910px;
 margin-left: auto;
 margin-right: auto;
-overflow: auto;
-border: 2px solid #000000;
+overflow-y: scroll;
 }
 
 #article_list table {
