@@ -85,6 +85,7 @@ background:   #EEEEEE;
 }
 
 #header {
+font-style: italic;
 text-align: center;
 line-height: 5px;
 padding-top: 20px;
@@ -92,4 +93,5 @@ padding-top: 20px;
 
 #header h1{
 font-size: 40px;
+font-style: normal;
 }

@@ -12,10 +12,7 @@ Article.create(:edits => 0, :created => "Tuesday, Feb. 01 2011",
 	:title => "Test Article One",
 	:author => "Test Author One",
 	:body =>
-	"Test article one.<br/><br/>Blah blah blah blah blah blah blah blah blah blah 
-	blah blah blah blah blah blah blah blah blah blah blah blah blah blah 
-	blah blah blah blah blah blah blah blah blah blah blah blah blah blah 
-	blah blah blah blah blah blah blah blah blah blah blah blah blah blah ")
+	"Test article one.")
 
 Article.create(:edits => 0, :created => "Wednesday, Feb. 02 2011",
 	:title => "Test Article Two",
@@ -100,8 +97,17 @@ Article.create(:edits => 0, :created => "Tuesday, Feb. 15 2011",
 	:author => "Test Author Fifteen",
 	:body =>
 	"Test article fifteen.")
+
+Quote.delete_all
 	
-Quote.create(:text => "... my cousin works for Bit.ly")
-Quote.create(:text => "... not just for the country of Spain")
-Quote.create(:text => "... what's \"Article\" in Spanish, anyway?")
-Quote.create(:text => "... with a name .com hipsters love!")
+Quote.create(:text => "my cousin works for Bit.ly")
+Quote.create(:text => "not just for the country of Spain")
+Quote.create(:text => "what's \"Article\" in Spanish, anyway?")
+Quote.create(:text => "with a name .com hipsters love!")
+Quote.create(:text => "we put the \"ticle\" in article")
+Quote.create(:text => "today your article... tomorrow the world")
+Quote.create(:text => "about to lose $50,000,000")
+Quote.create(:text => "automatically adds all acceptable articles anytime and anywhere")
+Quote.create(:text => "one little, two little, three little articles...")
+Quote.create(:text => "all your article are belong to us")
+Quote.create(:text => "because articles.com was already taken")
