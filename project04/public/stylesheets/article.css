@@ -57,3 +57,13 @@ background:   #DDDDDD;
 #article_list .list_odd {
 background:   #EEEEEE;
 }
+
+#header {
+text-align: center;
+line-height: 5px;
+padding-top: 20px;
+}
+
+#header h1{
+font-size: 40px;
+}
