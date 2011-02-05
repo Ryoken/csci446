@@ -12,13 +12,16 @@ Article.create(:edits => 0, :created => "Tuesday, Feb. 01 2011",
 	:title => "Test Article One",
 	:author => "Test Author One",
 	:body =>
-	"Test article one.")
+	"Test article one.<br/><br/>Blah blah blah blah blah blah blah blah blah blah 
+	blah blah blah blah blah blah blah blah blah blah blah blah blah blah 
+	blah blah blah blah blah blah blah blah blah blah blah blah blah blah 
+	blah blah blah blah blah blah blah blah blah blah blah blah blah blah ")
 
 Article.create(:edits => 0, :created => "Wednesday, Feb. 02 2011",
 	:title => "Test Article Two",
 	:author => "Test Author Two",
 	:body =>
-	"Test article twp.")
+	"Test article two.")
 
 Article.create(:edits => 0, :created => "Thursday, Feb. 03 2011",
 	:title => "Test Article Three",

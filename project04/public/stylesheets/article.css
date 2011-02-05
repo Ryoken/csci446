@@ -2,28 +2,54 @@ body {
 font-family: 'comic sans ms', verdana, arial, helvetica, sans-serif;
 }
 
-#article_list {
-height: 340px;
-width: 90%;
+#article_list_titles {
+text-align: left;
+width: 910px;
 margin-left: auto;
 margin-right: auto;
 overflow: auto;
 }
 
-#article_list table {
-width: 100%;
-border: 2px solid #000000;
-padding: 1px;
+#article_list_titles .title   {width: 150px; padding: 0px 0px 0px 5px;}
+#article_list .title          {width: 150px; padding: 0px 0px 0px 5px;}
+
+#article_list_titles .author  {width: 150px; padding: 0px 0px 0px 15px;}
+#article_list .author         {width: 150px; padding: 0px 0px 0px 15px;}
+
+#article_list_titles .created {width: 180px; padding: 0px 0px 0px 15px;}
+#article_list .created        {width: 180px; padding: 0px 0px 0px 15px;}
+
+#article_list .link           {width: 15px; padding: 0px 5px 0px 0px;}
+
+#article_list_titles table {
 border-collapse: collapse;
+width: 835px;
+background: #BBBBBB;
 }
 
-#article_list table th {
-height: 40px;
-background: #BBBBBB;
+#article_list {
+height: 340px;
+width: 910px;
+margin-left: auto;
+margin-right: auto;
+overflow: auto;
+border: 2px solid #000000;
+}
+
+#article_list table {
+width: 100%;
+border-collapse: collapse;
+table-layout: fixed;
 }
 
 #article_list table tr {
 height: 30px;
+}
+
+#article_list table td {
+white-space: nowrap;
+text-overflow: ellipsis;
+overflow: hidden;
 }
 
 #article_list .list_even {
