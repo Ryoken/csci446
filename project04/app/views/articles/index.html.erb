@@ -1,3 +1,5 @@
+<%= render(:partial => "header") %>
+
 <div id="article_list">
 	<h1>Listing articles</h1>
 
@@ -7,7 +9,6 @@
 			<th>Author</th>
 			<th>Body</th>
 			<th>Created</th>
-			<th>Edits</th>
 		</tr>
 		
 	<% @articles.each do |article| %>
@@ -16,9 +17,9 @@
 			<td><%=h article.author %></td>
 			<td><%=h article.body %></td>
 			<td><%=h article.created %></td>
-			<td><%= link_to 'Show', article %></td>
-			<td><%= link_to 'Edit', edit_article_path(article) %></td>
-			<td><%= link_to 'Destroy', article, :confirm => 'Are you sure?', :method => :delete %></td>
+			<td><%= link_to image_tag("page_go.png", :border => 0, :title => "View Article"), article %></td>
+			<td><%= link_to image_tag("page_edit.png", :border => 0, :title => "Edit Article"), edit_article_path(article) %></td>
+			<td><%= link_to image_tag("page_delete.png", :border => 0, :title => "Delete Article"), article, :confirm => 'Are you sure?', :method => :delete %></td>
 		</tr>
 	<% end %>
 	</table>

@@ -1,5 +1,5 @@
-#product-list table {
-        border-collapse: collapse;
+body, p, ol, ul, td {
+  font-family: 'comic sans ms', verdana, arial, helvetica, sans-serif;
 }
 
 #product-list table tr td {
@@ -36,10 +36,24 @@
   padding-left: 1em;
 }
 
+#article_list table {
+border: 2px solid #000000;
+padding: 1px;
+border-collapse: collapse;
+}
+
+#article_list table th {
+background: #BBBBBB;
+}
+
+#article_list table tr {
+border-right: 1px;
+}
+
 #article_list .list_even {
-  background:   #EEEEEE;
+background:   #DDDDDD;
 }
 
 #article_list .list_odd {
-  background:   #CCCCCC;
+background:   #EEEEEE;
 }
