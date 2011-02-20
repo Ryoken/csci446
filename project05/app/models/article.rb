@@ -3,10 +3,13 @@ class Article < ActiveRecord::Base
 	validates_uniqueness_of :title, :message => '- there is already an article with this title.'
 	validates_uniqueness_of :body, :message => '- this article has already been posted under another title.'
 	validate :no_sally
+	
+	before_save :add_count
 
 private
 	
 	def add_count
+		self.edits += 1 unless self.new_record?
 	end
 	
 	def no_sally
