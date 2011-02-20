@@ -1,130 +1,86 @@
 body {
-font-family: 'comic sans ms', verdana, arial, helvetica, sans-serif;
-}
-
-#article_list .title {
-padding: 0px 5px 0px 5px;
-}
-
-#article_list .author {
-padding: 0px 0px 0px 15px;
-}
-
-#article_list .body {
-padding: 0px 0px 0px 15px;
-}
-
-#article_list .created {
-padding: 0px 0px 0px 15px;
-}
-
-#article_list .link {
-width: 15px;
-padding: 0px 4px 0px 1px;
-background: #FFFFFF;
-}
+  font-family: "comic sans ms", verdana, arial, helvetica, sans-serif; }
 
 #article_list {
-text-align: left;
-width: 910px;
-margin-left: auto;
-margin-right: auto;
-}
-
-#article_list tbody {
-overflow-y: scroll;
-overflow-x: hidden;
-height: 300px;
-}
-
-#article_list table {
-width: 100%;
-border-collapse: collapse;
-table-layout: fixed;
-}
-
-#article_list table tr {
-height: 30px;
-}
-
-#article_list table td {
-white-space: nowrap;
-text-overflow: ellipsis;
-overflow: hidden;
-}
-
-#article_list .list_even {
-background:   #DDDDDD;
-}
-
-#article_list .list_odd {
-background:   #EEEEEE;
-}
+  padding: 0px 4px 0px 1px;
+    padding-background: white;
+  text-align: left;
+  width: 910px;
+  margin-left: auto;
+  margin-right: auto; }
+  #article_list .title {
+    padding: 0px 5px 0px 5px; }
+  #article_list .author, #article_list .body, #article_list .created {
+    padding: 0px 0px 0px 15px; }
+  #article_list .link {
+    width: 15px; }
+  #article_list tbody {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 300px; }
+  #article_list table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed; }
+  #article_list tr {
+    height: 30px; }
+  #article_list td {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden; }
+  #article_list .list_even {
+    background: #dddddd; }
+  #article_list .list_odd {
+    background: #eeeeee; }
 
 #header {
-font-style: italic;
-text-align: center;
-line-height: 5px;
-padding-top: 20px;
-}
-
-#header h1{
-font-size: 40px;
-font-style: normal;
-}
+  font-style: italic;
+  text-align: center;
+  line-height: 5px;
+  padding-top: 20px; }
+  #header h1 {
+    font-size: 40px;
+    font-style: normal; }
 
 #article_main {
-padding-top: 30px;
-text-align: left;
-width: 910px;
-margin-left: auto;
-margin-right: auto;
-}
+  padding-top: 30px;
+  text-align: left;
+  width: 910px;
+  margin-left: auto;
+  margin-right: auto; }
+  #article_main a {
+    text-decoration: none;
+    color: #aaaaaa; }
+    #article_main a:hover {
+      color: black; }
 
-#article_main a {
-text-decoration: none;
-color: #aaaaaa;
-}
-
-#article_main a:hover {
-color: #000000;
-}
-
-#article_body{
-text-align: justify;
-width: 800px;
-margin-left: auto;
-margin-right: auto;
-}
+#article_body {
+  text-align: justify;
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto; }
 
 #article_show_author {
-font-size: 10px;
-}
+  font-size: 10px; }
 
 #article_main h2 {
-margin-bottom: 5px;
-line-height: 20px;
-}
+  margin-bottom: 5px;
+  line-height: 20px; }
 
-#article_edit{
-width: 800px;
-margin-left: auto;
-margin-right: auto;
-text-align:left;
-padding-top: 10px;
-}
+#article_edit {
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+  padding-top: 10px; }
 
 /* The error box */
-
 .fieldWithErrors {
   padding: 2px;
-  background-color: #EEFFEE;
-  display: inline;
-}
-
-.fieldWithErrors * {
-  background-color: red;
-}
+  background-color: #eeffee;
+  display: inline; }
+  .fieldWithErrors * {
+    background-color: red; }
 
 #errorExplanation {
   width: 400px;
@@ -132,26 +88,19 @@ padding-top: 10px;
   padding: 7px;
   padding-bottom: 12px;
   margin-bottom: 20px;
-  background-color: #f0f0f0;
-}
-
-#errorExplanation h2 {
-  text-align: left;
-  font-weight: bold;
-  padding: 5px 5px 5px 15px;
-  font-size: 12px;
-  margin: -7px;
-  background-color: #c00;
-  color: #fff;
-}
-
-#errorExplanation p {
-  color: #333;
-  margin-bottom: 0;
-  padding: 5px;
-}
-
-#errorExplanation ul li {
-  font-size: 12px;
-  list-style: square;
-}
+  background-color: #f0f0f0; }
+  #errorExplanation h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px;
+    background-color: #cc0000;
+    color: white; }
+  #errorExplanation p {
+    color: #333333;
+    margin-bottom: 0;
+    padding: 5px; }
+  #errorExplanation ul li {
+    font-size: 12px;
+    list-style: square; }
