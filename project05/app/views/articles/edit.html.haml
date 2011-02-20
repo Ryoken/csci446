@@ -1,0 +1,21 @@
+#article_main
+	= link_to image_tag("arrow_left.png", :border => 0) + " list all articles", session[:edit_redirect], :title => "Back to article listing"
+	%h2
+		Editing
+		= @article.title
+	- form_for(@article) do |f|
+		#article_edit
+			%p
+				= f.label :title
+				%br/
+				= f.text_field :title
+			%p
+				= f.label :author
+				%br/
+				= f.text_field :author
+			%p
+				= f.label :body
+				%br/
+				= f.text_area :body
+			%p
+				= f.submit "Save Changes"
