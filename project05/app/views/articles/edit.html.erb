@@ -1,5 +1,5 @@
 <div id="article_main">
-	<%= link_to image_tag("arrow_left.png", :border => 0) + " list all articles", articles_path, :title => "Back to article listing"%>
+	<%= link_to image_tag("arrow_left.png", :border => 0) + " list all articles", session[:edit_redirect], :title => "Back to article listing"%>
 	<h2>Editing '<%=h @article.title %>'</h2>
 	<% form_for(@article) do |f| %>
 	<%= f.error_messages %>
