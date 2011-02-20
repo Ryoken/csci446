@@ -1,30 +1,35 @@
-<div id="article_list_titles">
-	
-	<h2>All the World's <%= pluralize( Article.count, "Article") %> <%= link_to image_tag("add.png", :border => 0), new_article_path, :title => "Create a new article"%></h2>
-	
+<h2>All the World's <%= pluralize( Article.count, "Article") %> <%= link_to image_tag("add.png", :border => 0), new_article_path, :title => "Create a new article"%></h2>
+
+<div id="article_list">
 	<table>
+		<thead>
 			<tr>
 				<th class="title">Title</th>
 				<th class="author">Author</th>
 				<th class="body">Body</th>
 				<th class="created">Created</th>
+				<th class="link"></th>
+				<th class="link"></th>
+				<th class="link"></th>
 			</tr>
-	</table>
-</div>
-
-<div id="article_list">
-	<table>
-	<% @articles.each do |article| %>
-		<tr class="<%= cycle('list_odd', 'list_even') %>">
-			<td class="title"><%=h article.title %></td>
-			<td class="author"><%=h article.author %></td>
-			<td class="body"> <%=h article.body %></td>
-			<td class="created"><%=h article.created %></td>
-			<td class="link"><%= link_to image_tag("magnifier.png", :border => 0, :title => "View Article"), article %></td>
-			<td class="link"><%= link_to image_tag("page_edit.png", :border => 0, :title => "Edit Article"), edit_article_path(article) %></td>
-			<td class="link"><%= link_to image_tag("delete.png", :border => 0, :title => "Delete Article"), article, :confirm => 'Are you sure you wish to delete this article?', :method => :delete %></td>
-		</tr>
-	<% end %>
+		</thead>
+		<tfoot>
+		</tfoot>
+		<tbody>
+			<% @articles.each do |article| %>
+				<tr class="<%= cycle('list_odd', 'list_even') %>">
+					<td class="title"><%=h article.title %></td>
+					<td class="author"><%=h article.author %></td>
+					<td class="body"><%=h article.body %></td>
+					<td class="created"><%=h article.created %></td>
+					<td><%= link_to image_tag("magnifier.png", :border => 0, :title => "View Article"), article %></td>
+					<td><%= link_to image_tag("page_edit.png", :border => 0, :title => "Edit Article"), edit_article_path(article) %></td>
+					<td><%= link_to image_tag("delete.png", :border => 0, :title => "Delete Article"), article, :confirm => 'Are you sure you wish to delete this article?', :method => :delete %></td>
+				</tr>
+			<% end %>
+		</tbody>
+		<tfoot>
+		</tfoot>
 	</table>
 </div>
 <br/>

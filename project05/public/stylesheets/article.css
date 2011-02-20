@@ -2,35 +2,11 @@ body {
 font-family: 'comic sans ms', verdana, arial, helvetica, sans-serif;
 }
 
-#article_list_titles {
-text-align: left;
-width: 910px;
-margin-left: auto;
-margin-right: auto;
-overflow: none;
-}
-
-#article_list_titles .title {
-width: 150px;
-padding: 0px 5px 0px 5px;
-}
-
 #article_list .title {
-width: 150px;
 padding: 0px 5px 0px 5px;
-}
-
-#article_list_titles .author {
-width: 150px;
-padding: 0px 0px 0px 15px;
 }
 
 #article_list .author {
-width: 150px;
-padding: 0px 0px 0px 15px;
-}
-
-#article_list_titles .body {
 padding: 0px 0px 0px 15px;
 }
 
@@ -38,13 +14,7 @@ padding: 0px 0px 0px 15px;
 padding: 0px 0px 0px 15px;
 }
 
-#article_list_titles .created {
-width: 180px;
-padding: 0px 0px 0px 15px;
-}
-
 #article_list .created {
-width: 180px;
 padding: 0px 0px 0px 15px;
 }
 
@@ -54,18 +24,17 @@ padding: 0px 4px 0px 1px;
 background: #FFFFFF;
 }
 
-#article_list_titles table {
-border-collapse: collapse;
-width: 835px;
-background: #BBBBBB;
-}
-
 #article_list {
-max-height: 300px;
+text-align: left;
 width: 910px;
 margin-left: auto;
 margin-right: auto;
+}
+
+#article_list tbody {
 overflow-y: scroll;
+overflow-x: hidden;
+height: 300px;
 }
 
 #article_list table {
