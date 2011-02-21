@@ -1,0 +1,13 @@
+!!!
+%html{:xmlns => "http://www.w3.org/1999/xhtml", "xml:lang" => "en", :lang => "en"}
+	%head
+		%meta{"http-equiv" => "content-type", "content" => "text/html;charset=UTF-8"}
+		%title Articl.es - All the World's Articles (with a name .com hipsters love)
+		= stylesheet_link_tag "article"
+	= render(:partial => "header")
+	%br/
+	%ul.menu_bar
+		%li= link_to "articles", articles_path
+		%li= link_to "authors", authors_path
+	%p{:style => "color: green"}= notice
+	= yield

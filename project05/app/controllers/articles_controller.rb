@@ -1,7 +1,8 @@
 class ArticlesController < ApplicationController
 
 	before_filter :set_edit_return_url, :only => [:edit]
-
+	before_filter :load_authors, :only => [:new, :edit]
+	
   # GET /articles
   # GET /articles.xml
   def index
@@ -90,6 +91,10 @@ private
 
 	def set_edit_return_url
 		session[:edit_redirect] = request.referer
+	end
+	
+	def load_authors
+		@authors = Author.all
 	end
   
 end

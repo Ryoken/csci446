@@ -1,6 +1,15 @@
 body {
   font-family: "comic sans ms", verdana, arial, helvetica, sans-serif; }
 
+ul.menu_bar {
+  list-style-type: none;
+  margin: 0px 0px 20px 0px;
+  padding: 10px;
+  background-color: #f0f0f0; }
+  ul.menu_bar li {
+    display: inline;
+    margin-right: 100px; }
+
 #article_list {
   padding: 0px 4px 0px 1px;
     padding-background: white;

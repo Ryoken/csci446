@@ -10,9 +10,9 @@
 				%br/
 				= f.text_field :title
 			%p
-				= f.label :author
+				= f.label :author_id
 				%br/
-				= f.text_field :author
+				= f.select :author_id, @authors.collect { |a| [a.name, a.id]}, :include_blank => true
 			%p
 				= f.label :body
 				%br/
