@@ -7,6 +7,9 @@ class Author < ActiveRecord::Base
 	
 	has_attached_file :photo, :url => "/assets/:class/:attachment/:id/:style/:filename"
 	
+	cattr_reader :per_page
+	@@per_page = 10
+	
 	def to_s
 		name
 	end

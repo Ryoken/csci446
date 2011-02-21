@@ -48,7 +48,6 @@ ul.menu_bar {
     font-style: normal; }
 
 #article_main {
-  padding-top: 30px;
   text-align: left;
   width: 910px;
   margin-left: auto;
@@ -67,10 +66,6 @@ ul.menu_bar {
 
 #article_show_author {
   font-size: 10px; }
-
-#article_main h2 {
-  margin-bottom: 5px;
-  line-height: 20px; }
 
 #article_edit {
   width: 800px;
