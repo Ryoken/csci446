@@ -5,6 +5,8 @@ class Author < ActiveRecord::Base
 
 	has_many :articles
 	
+	has_attached_file :photo, :url => "/assets/:class/:attachment/:id/:style/:filename"
+	
 	def to_s
 		name
 	end
