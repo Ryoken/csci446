@@ -23,3 +23,4 @@
 					%td= link_to image_tag("magnifier.png", :border => 0, :title => "View Article"), article
 					%td= link_to image_tag("page_edit.png", :border => 0, :title => "Edit Article"), edit_article_path(article)
 					%td= link_to image_tag("delete.png", :border => 0, :title => "Delete Article"), article, :confirm => 'Are you sure you wish to delete this article?', :method => :delete
+	%p= will_paginate @articles

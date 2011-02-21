@@ -6,7 +6,7 @@ class ArticlesController < ApplicationController
   # GET /articles
   # GET /articles.xml
   def index
-    @articles = Article.all
+    @articles = Article.paginate(:page => params[:page])
 
     respond_to do |format|
       format.html # index.html.erb

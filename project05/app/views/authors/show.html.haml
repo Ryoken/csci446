@@ -1,9 +1,10 @@
-%p
-	%b Name:
-	=h @author.name
-%p
-	%b Photo:
-	= image_tag @author.photo.url
-= link_to 'Edit', edit_author_path(@author)
-| 
-= link_to 'Back', authors_path
+#article_main
+	%p
+		%b Name:
+		=h @author.name
+	%p
+		%b Photo:
+		= image_tag @author.photo.url
+	= link_to 'Edit', edit_author_path(@author)
+	| 
+	= link_to 'Back', authors_path

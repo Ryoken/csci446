@@ -1,7 +1,6 @@
 #article_main
 	= link_to image_tag("arrow_left.png", :border => 0) + " list all articles", session[:edit_redirect], :title => "Back to article listing"
-	%h2
-		Editing
+	%h2 Editing
 		= @article.title
 	- form_for(@article) do |f|
 		#article_edit

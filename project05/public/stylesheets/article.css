@@ -23,10 +23,6 @@ ul.menu_bar {
     padding: 0px 0px 0px 15px; }
   #article_list .link {
     width: 15px; }
-  #article_list tbody {
-    overflow-y: scroll;
-    overflow-x: hidden;
-    height: 300px; }
   #article_list table {
     width: 100%;
     border-collapse: collapse;

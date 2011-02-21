@@ -41,5 +41,6 @@ Rails::Initializer.run do |config|
   
   config.gem "haml"
   config.gem "paperclip"
+  config.gem "will_paginate"
 
 end
