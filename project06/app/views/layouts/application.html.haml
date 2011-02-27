@@ -5,14 +5,7 @@
 		%title Gamez
 		= stylesheet_link_tag "application"
 	#user_navigation
-		- if current_user
-			= link_to "Edit Profile", edit_user_path(:current)
-			|
-			= link_to "Logout", logout_path
-		- else
-			= link_to "Register", new_user_path
-			|
-			= link_to "Log In", login_path
+		= user_nav
 	Main Page
 	%p{:style => "color: green"}= notice
 	= yield

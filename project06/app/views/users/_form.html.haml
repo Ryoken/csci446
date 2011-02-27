@@ -5,11 +5,19 @@
 		%br/
 		= f.text_field :username
 	%p
+		= f.label :fname, "First Name"
+		%br/
+		= f.text_field :fname
+	%p
+		= f.label :lname, "Last Name"
+		%br/
+		= f.text_field :lname
+	%p
 		= f.label :password
 		%br/
 		= f.password_field :password
 	%p
-		= f.label :password_confirmation
+		= f.label :password_confirmation, "Retype Password"
 		%br/
 		= f.password_field :password_confirmation
 	%p
