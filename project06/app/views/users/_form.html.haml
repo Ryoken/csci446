@@ -26,6 +26,10 @@
 		= f.label :photo
 		%br/
 		= f.file_field :photo
-	= validation_code(@user)
+	%p
+		= f.label :role_id
+		%br/
+		= f.select :role_id, Role.find(:all).collect { |r| [r.name, r.id] }, :include_blank => false, :selected => @user.role_id
+	= validation_code
 	%p
 		= f.submit

@@ -1,10 +1,12 @@
 class RolesController < ApplicationController
+
+	filter_resource_access
+
   def index
     @roles = Role.all
   end
 
   def show
-    @role = Role.find(params[:id])
   end
 
   def new
@@ -12,7 +14,6 @@ class RolesController < ApplicationController
   end
 
   def create
-    @role = Role.new(params[:role])
     if @role.save
       flash[:notice] = "Successfully created role."
       redirect_to @role
@@ -22,11 +23,9 @@ class RolesController < ApplicationController
   end
 
   def edit
-    @role = Role.find(params[:id])
   end
 
   def update
-    @role = Role.find(params[:id])
     if @role.update_attributes(params[:role])
       flash[:notice] = "Successfully updated role."
       redirect_to @role
@@ -36,7 +35,6 @@ class RolesController < ApplicationController
   end
 
   def destroy
-    @role = Role.find(params[:id])
     @role.destroy
     flash[:notice] = "Successfully destroyed role."
     redirect_to roles_url

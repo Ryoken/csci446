@@ -2,22 +2,18 @@
 module ApplicationHelper
 
 	def user_nav()
-		out=""
+		out="Welcome "
 		if current_user
-			out << "Welcome " << current_user.username << "! "
-			out << link_to('Edit Profile', edit_user_path(:current))
+			out << current_user.get_name << "!<br/>"
+			out << link_to('Edit Profile', edit_user_path(current_user))
 			out << " | "
 			out << link_to('Logout', logout_path)
 		else
-			out << link_to('Register', new_user_path)
+			out << "guest!<br/>" << link_to('Register', new_user_path)
 			out << " | "
 			out << link_to('Log In', login_path)
 		end
 		out.html_safe
-	end
-	
-	def test()
-		"hello"
 	end
 	
 end

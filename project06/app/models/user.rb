@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
 
 	belongs_to :role
-	attr_accessible :username, :password, :password_confirmation, :photo
+	attr_accessible :username, :password, :password_confirmation, :photo, :fname, :lname, :role_id
 	acts_as_authentic
 	cattr_reader :per_page
 	@@per_page = 10
@@ -9,6 +9,14 @@ class User < ActiveRecord::Base
 
 	def role_symbols
 		return [role.name.to_sym]
+	end
+	
+	def get_name
+		if fname?
+			fname
+		else
+			username
+		end
 	end
 
 end
