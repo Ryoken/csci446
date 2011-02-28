@@ -13,5 +13,9 @@ Rails::Initializer.run do |config|
   config.gem "haml"
   config.gem "paperclip"
   config.gem "will_paginate"
+  config.gem "ambethia-recaptcha", :lib => "recaptcha/rails", :source => "http://gems.github.com"
+
+  ENV['RECAPTCHA_PUBLIC_KEY']  = '6Lfl_MESAAAAAIpFf1jmwuM-kG8ftgo4d2tAtq2D'
+  ENV['RECAPTCHA_PRIVATE_KEY'] = '6Lfl_MESAAAAADUYifVd_1Rpc2C1OIxOR-WhTkzG'
 
 end

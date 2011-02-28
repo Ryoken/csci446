@@ -4,6 +4,7 @@ module ApplicationHelper
 	def user_nav()
 		out=""
 		if current_user
+			out << "Welcome " << current_user.username << "! "
 			out << link_to('Edit Profile', edit_user_path(:current))
 			out << " | "
 			out << link_to('Logout', logout_path)
