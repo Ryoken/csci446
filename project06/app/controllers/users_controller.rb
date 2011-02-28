@@ -12,15 +12,19 @@ class UsersController < ApplicationController
     end
   end
 
-  def create
-    @user = User.new(params[:user])
-    if @user.save && verify_recaptcha(:model => @user)
-      flash[:notice] = "User successfully registered."
-      redirect_to root_url
-    else
-      render :action => 'new'
-    end
-  end
+	def create
+		@user = User.new(params[:user])
+		if verify_recaptcha(:model => @user)
+			if @user.save
+				flash[:notice] = "User successfully registered."
+				redirect_to root_url
+			else
+				render :action => 'new'
+			end
+		else
+			render :action => 'new'
+		end
+	end
 
   def edit
     @user = current_user

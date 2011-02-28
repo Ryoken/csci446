@@ -4,8 +4,9 @@
 		%meta{"http-equiv" => "content-type", "content" => "text/html;charset=UTF-8"}
 		%title Gamez
 		= stylesheet_link_tag "application"
-	#user_navigation
-		= user_nav
-	Main Page
-	%p{:style => "color: green"}= notice
-	= yield
+	#main_view
+		#user_navigation
+			= user_nav
+		Main Page
+		%p{:style => "color: green"}= notice
+		= yield
