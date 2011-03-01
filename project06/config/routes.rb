@@ -1,7 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :roles
 
-
+	map.resources :roles
 	map.resources :user_sessions
 	map.resources :users
   	map.connect ':controller/:action/:id'

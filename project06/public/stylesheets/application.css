@@ -4,9 +4,18 @@
   margin-right: auto; }
 
 #user_navigation {
-  text-align: right;
+  margin-right: auto;
   float: right;
   font-size: 12px; }
+
+#user_nav_icon {
+  float: right;
+  margin-left: 10px; }
+
+#user_nav_text {
+  text-align: right;
+  float: left;
+  margin-top: 10px; }
 
 #user_photo_display {
   float: right; }

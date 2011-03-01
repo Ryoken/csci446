@@ -13,7 +13,11 @@ class User < ActiveRecord::Base
 	
 	def get_name
 		if fname?
-			fname
+			if lname?
+				fname + " " + lname
+			else
+				fname
+			end
 		else
 			username
 		end

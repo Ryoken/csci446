@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 
-	filter_resource_access
+	filter_access_to
 
   def new
     @user = User.new
@@ -8,6 +8,7 @@ class UsersController < ApplicationController
 
   def index
     @users = User.paginate(:page => params[:page])
+
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @users }
@@ -15,6 +16,7 @@ class UsersController < ApplicationController
   end
 
 	def create
+		@user = User.new(params[:user])
 		if verify_recaptcha(:model => @user)
 			if @user.save
 				flash[:notice] = "User successfully registered."
@@ -27,19 +29,22 @@ class UsersController < ApplicationController
 		end
 	end
 
-	def edit
-	end
+  def edit
+    @user = current_user
+  end
 
-	def update
-		if @user.update_attributes(params[:user])
-			flash[:notice] = "Successfully updated user."
-			redirect_to root_url
-		else
-			render :action => 'edit'
-		end
-	end
+  def update
+    @user = current_user
+	     if @user.update_attributes(params[:user])
+      flash[:notice] = "Successfully updated user."
+      redirect_to root_url
+    else
+      render :action => 'edit'
+    end
+  end
   
   def destroy
+    @user = User.find(params[:id])
     @user.destroy
 
     respond_to do |format|

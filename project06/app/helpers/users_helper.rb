@@ -1,11 +1,9 @@
 module UsersHelper
 
 	def validation_code
-		out = ""
 		if !current_user
-			out << recaptcha_tags
+			render :partial => "validate"
 		end
-		out.html_safe
 	end
 	
 	def role_code(f)
