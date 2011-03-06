@@ -7,6 +7,6 @@
     %tr
       %td= h role.name
       %td= link_to 'Edit', edit_admin_role_path(role)
-      %td= link_to 'Destroy', admin_roles_path(role), :confirm => 'Are you sure?', :method => :delete
+      %td= link_to 'Destroy', admin_role_path(role), :confirm => 'Are you sure?', :method => :delete
 
 %p= link_to "New Role", new_admin_role_path
