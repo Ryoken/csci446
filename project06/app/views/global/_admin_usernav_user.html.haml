@@ -1,0 +1,8 @@
+#user_nav
+	= user_nav_photo
+	#user_nav_text
+		= "Welcome, admin "+current_user.get_name+"!"
+		%br/
+		= link_to "Edit Profile", edit_admin_user_path(current_user)
+		| 
+		= link_to "Logout", logout_path

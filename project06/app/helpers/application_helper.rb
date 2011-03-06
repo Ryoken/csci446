@@ -3,7 +3,11 @@ module ApplicationHelper
 
 	def user_nav
 		if current_user
-			render :partial => "global/usernav_user"
+			if current_user.role.name == "admin"
+				render :partial => "global/admin_usernav_user"
+			else
+				render :partial => "global/usernav_user"
+			end
 		else
 			render :partial => "global/usernav_nouser"
 		end

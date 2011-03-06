@@ -1,11 +1,11 @@
-- form_for @user, :html => { :multipart => true } do |f|
+- form_for [:member, @user], :html => { :multipart => true } do |f|
 	= f.error_messages
 	#user_photo_display
 		= link_to(image_tag(@user.photo.url(:small)), @user.photo.url, :html => { :border => 0 }) if @user.photo?
 	%p
-		= f.label :username
+		= f.label "Username (may not be changed)"
 		%br/
-		= f.text_field :username
+		= f.text_field :username, :readonly => true
 	%p
 		= f.label :fname, "First Name"
 		%br/
@@ -26,6 +26,5 @@
 		= f.label :photo
 		%br/
 		= f.file_field :photo
-	= validation_code
 	%p
 		= f.submit

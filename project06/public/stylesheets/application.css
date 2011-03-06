@@ -19,3 +19,12 @@
 
 #user_photo_display {
   float: right; }
+
+ul.menu_bar {
+  list-style-type: none;
+  margin: 0px 0px 20px 0px;
+  padding: 10px;
+  background-color: #f0f0f0; }
+  ul.menu_bar li {
+    display: inline;
+    margin-right: 100px; }
