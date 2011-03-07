@@ -3,7 +3,7 @@ class User < ActiveRecord::Base
 	belongs_to :role
 	has_many :games
 	before_validation :set_member
-	attr_accessible :username, :password, :password_confirmation, :photo, :fname, :lname, :role_id
+	attr_accessible :username, :password, :password_confirmation, :photo, :fname, :lname, :role_id, :last_login_at, :current_login_at
 	acts_as_authentic do |c|
 		c.merge_validates_length_of_password_field_options({:minimum => 6})
 	end

@@ -10,6 +10,8 @@ User.create(
    :username => "administrator",
    :password => "password",
    :password_confirmation => "password",
+	:last_login_at => Time.now,
+	:current_login_at => Time.now,
    :role_id =>
 Role.create(
 	:name => "admin").id).id)
@@ -21,6 +23,8 @@ Game.create(
 User.create(
    :username => "member",
    :password => "password",
+	:last_login_at => Time.now,
+	:current_login_at => Time.now,
    :password_confirmation => "password",
    :role_id =>
 Role.create(
