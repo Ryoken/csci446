@@ -1,7 +1,7 @@
 #user_nav
 	= user_nav_photo
 	#user_nav_text
-		= "Welcome, member "+current_user.get_name+"!"
+		= "Welcome "+current_user.get_name+"!"
 		%br/
 		= link_to "My Games", member_root_path
 		| 

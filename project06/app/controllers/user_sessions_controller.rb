@@ -10,9 +10,10 @@ class UserSessionsController < ApplicationController
 	def create
     @user_session = UserSession.new(params[:user_session])
     if @user_session.save
-      flash[:notice] = "Successfully logged in."
+      flash[:notice] = "Welcome, #{get_name}."
 		begin_page
     else
+		flash[:notice] = "Sorry, we could not register you."
       render :action => 'new'
     end
   end

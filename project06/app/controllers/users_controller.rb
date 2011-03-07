@@ -11,9 +11,10 @@ class UsersController < ApplicationController
 		@user_session = UserSession.new(params[:user])
 		if verify_recaptcha(:model => @user)
 			if @user.save and @user_session.save
-				flash[:notice] = "User successfully registered."
+				flash[:notice] = "Welcome, #{get_name}."
 				begin_page
 			else
+				flash[:notice] = "Sorry, we could not register you."
 				render :action => 'new'
 			end
 		else
