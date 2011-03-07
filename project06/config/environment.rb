@@ -8,7 +8,7 @@ require File.join(File.dirname(__FILE__), 'boot')
 
 Rails::Initializer.run do |config|
 
-  config.time_zone = 'UTC'
+  config.time_zone = 'MST'
   config.gem "authlogic"
   config.gem "haml"
   config.gem "paperclip"

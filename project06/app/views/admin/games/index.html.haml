@@ -1,0 +1,12 @@
+%h2
+	= pluralize( Game.count, "Game")
+	= link_to image_tag("add.png", :border => 0), new_admin_game_path, :title => "Create a new game"
+
+%table
+	%tr
+		%th Name
+	- @games.each do |game|
+		%tr
+			%td= h game.name
+			%td= link_to 'Edit', edit_admin_game_path(game)
+			%td= link_to 'Destroy', admin_game_path(game), :confirm => 'Are you sure?', :method => :delete

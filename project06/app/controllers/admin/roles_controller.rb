@@ -1,6 +1,6 @@
 class Admin::RolesController < Admin::AdminController
 
-	filter_access_to :all
+
 
 	def index
 		@roles = Role.paginate(:page => params[:page])

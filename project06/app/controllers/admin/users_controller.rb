@@ -16,15 +16,15 @@ class Admin::UsersController < Admin::AdminController
 		render :action => 'edit'
 	end
 
-  def update
-    @user = User.find(params[:id])
-	     if @user.update_attributes(params[:user])
-      flash[:notice] = "Successfully updated user."
-      redirect_to admin_root_url
-    else
-      render :action => 'edit'
-    end
-  end
+	def update
+		@user = User.find(params[:id])
+		if @user.update_attributes(params[:user])
+			flash[:notice] = "Successfully updated user."
+			redirect_to admin_root_url
+		else
+			render :action => 'edit'
+		end
+	end
   
   def destroy
     @user = User.find(params[:id])

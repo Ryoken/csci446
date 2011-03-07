@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
 
 	belongs_to :role
+	has_many :games
 	before_validation :set_member
 	attr_accessible :username, :password, :password_confirmation, :photo, :fname, :lname, :role_id
 	acts_as_authentic
@@ -25,7 +26,7 @@ class User < ActiveRecord::Base
 	end
 	
 	def set_member
-		self.role = Role.find_by_name("member")
+		self.role = Role.find_by_name("member") if self.role.nil?
 	end
 
 end

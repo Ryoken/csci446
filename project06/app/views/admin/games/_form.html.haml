@@ -1,0 +1,27 @@
+- form_for [:admin, @game] do |f|
+	= f.error_messages
+	%p
+		= f.label :name
+		%br
+		= f.text_field :name
+	%p
+		= f.radio_button :rating, 4
+		= f.label "Excellent"
+		%br
+		= f.radio_button :rating, 3
+		= f.label "Good"
+		%br
+		= f.radio_button :rating, 2, :checked => true
+		= f.label "Neutral"
+		%br
+		= f.radio_button :rating, 1
+		= f.label "Bad"
+		%br
+		= f.radio_button :rating, 0
+		= f.label "Terrible"
+	%p
+		= f.label :author
+		%br
+		= f.select :author, User.all.collect { |u| [u.username, u.id]}, :include_blank => false, :selected => select_author
+	%p
+		= f.submit

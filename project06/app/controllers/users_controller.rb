@@ -8,10 +8,11 @@ class UsersController < ApplicationController
 
 	def create
 		@user = User.new(params[:user])
+		@user_session = UserSession.new(params[:user])
 		if verify_recaptcha(:model => @user)
-			if @user.save
+			if @user.save and @user_session.save
 				flash[:notice] = "User successfully registered."
-				redirect_to users_edit_url
+				begin_page
 			else
 				render :action => 'new'
 			end

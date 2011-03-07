@@ -6,14 +6,8 @@ module UsersHelper
 		end
 	end
 	
-	def role_code(f)
-		out = ""
-		if current_user
-			out << f.label(:role_id)
-			out << "<br/>" << @user.role_id
-			out << f.select(:role_id, Role.find(:all).collect { |r| [r.name, r.id] }, :include_blank => false, :selected => @user.role_id)
-		end
-		out.html_safe
+	def get_num_games(user_id)
+		Game.find_all_by_author(user_id).count
 	end
 
 end

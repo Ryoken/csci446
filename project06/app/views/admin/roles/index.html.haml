@@ -1,12 +1,9 @@
-%h2 Roles
+%h2
+	Roles
+	= link_to image_tag("add.png", :border => 0), new_admin_role_path, :title => "Create a new role"
 
 %table
-  %tr
-    %th Name
-  - for role in @roles
-    %tr
-      %td= h role.name
-      %td= link_to 'Edit', edit_admin_role_path(role)
-      %td= link_to 'Destroy', admin_role_path(role), :confirm => 'Are you sure?', :method => :delete
-
-%p= link_to "New Role", new_admin_role_path
+	- for role in @roles
+		%tr
+			%td=h link_to role.name, edit_admin_role_path(role)
+			%td=h link_to image_tag("delete.png", :border => 0), admin_role_path(role), :title => "Delete role", :confirm => 'Are you sure?', :method => :delete
