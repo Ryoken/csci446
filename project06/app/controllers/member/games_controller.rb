@@ -1,9 +1,9 @@
-class Admin::GamesController < Admin::AdminController
+class Member::GamesController < Member::MemberController
 
 	filter_access_to :all
 
 	def index
-		@games = Game.paginate(:page => params[:page])
+		@games = Game.paginate(:page => params[:page], :conditions => ["author == #{current_user.id}"])
 	end
 
 	def new
@@ -14,7 +14,7 @@ class Admin::GamesController < Admin::AdminController
 		@game = Game.new(params[:game])
 		if @game.save
 			flash[:notice] = "Successfully created game."
-			redirect_to admin_games_url
+			redirect_to member_games_url
 		else
 			render :action => 'new'
 		end
@@ -28,7 +28,7 @@ class Admin::GamesController < Admin::AdminController
 		@game = Game.find(params[:id])
 		if @game.update_attributes(params[:game])
 			flash[:notice] = "Successfully updated game."
-			redirect_to admin_games_url
+			redirect_to member_games_url
 		else
 			render :action => 'edit'
 		end
@@ -38,7 +38,7 @@ class Admin::GamesController < Admin::AdminController
 		@game = Game.find(params[:id])
 		@game.destroy
 		flash[:notice] = "Successfully destroyed game."
-		redirect_to admin_games_url
+		redirect_to member_games_url
 	end
 
 end

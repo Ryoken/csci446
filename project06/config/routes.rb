@@ -15,8 +15,9 @@ ActionController::Routing::Routes.draw do |map|
 	end
 	
 	map.namespace :member do |m|
+		m.resources :games
 		m.resources :users, :only => [:edit, :update, :destroy]
-		m.root :controller => 'users', :action => 'edit'
+		m.root :controller => 'games', :action => 'index'
 	end
 
 end

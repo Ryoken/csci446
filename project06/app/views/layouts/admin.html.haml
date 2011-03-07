@@ -7,7 +7,8 @@
 	#main_view
 		#user_navigation
 			= user_nav
-		%h2 Gamez - Admin
+		%h2 
+			= link_to "Gamez", root_url
 		%ul.menu_bar
 			%li= link_to "Games", admin_games_path
 			%li= link_to "Users", admin_users_path

@@ -3,6 +3,8 @@
 	#user_nav_text
 		= "Welcome, member "+current_user.get_name+"!"
 		%br/
+		= link_to "My Games", member_root_path
+		| 
 		= link_to "Edit Profile", edit_member_user_path(current_user)
 		| 
 		= link_to "Logout", logout_path

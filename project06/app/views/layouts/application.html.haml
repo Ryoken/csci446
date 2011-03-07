@@ -7,6 +7,7 @@
 	#main_view
 		#user_navigation
 			= user_nav
-		%h2 Gamez
+		%h2 
+			= link_to "Gamez", root_url
 		%p{:style => "color: green"}= notice
 		= yield

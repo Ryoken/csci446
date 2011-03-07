@@ -7,6 +7,7 @@ authorization do
 	
 	role :member do
 		has_permission_on :member_users, :to => [ :create, :new, :edit, :update, :destroy ]
+		has_permission_on :member_games, :to => [ :index, :create, :edit, :destroy, :update, :new]
 	end
 	
 	role :admin do

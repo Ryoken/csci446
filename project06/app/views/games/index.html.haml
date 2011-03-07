@@ -2,11 +2,11 @@
 
 %table
 	%tr
-		%th Name
+		%th Title
 		%th Rating
 		%th Date Added
 	- @games.each do |game|
 		%tr
 			%td= h game.name
-			%td= get_rating(game)
+			%td= get_rating(game.rating)
 			%td= get_date(game)
