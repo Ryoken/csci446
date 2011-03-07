@@ -5,7 +5,7 @@ class Game < ActiveRecord::Base
 	belongs_to :user
 	attr_accessible :name, :author, :rating
 	cattr_reader :per_page
-	@@per_page = 10
+	@@per_page = 8
 
 protected
 

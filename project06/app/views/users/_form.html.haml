@@ -4,28 +4,22 @@
 		= link_to(image_tag(@user.photo.url(:small)), @user.photo.url, :html => { :border => 0 }) if @user.photo?
 	%p
 		= f.label :username
-		%br/
 		= f.text_field :username
 	%p
 		= f.label :fname, "First Name"
-		%br/
 		= f.text_field :fname
 	%p
 		= f.label :lname, "Last Name"
-		%br/
 		= f.text_field :lname
 	%p
 		= f.label :password
-		%br/
 		= f.password_field :password
 	%p
 		= f.label :password_confirmation, "Retype Password"
-		%br/
 		= f.password_field :password_confirmation
 	%p
 		= f.label :photo
-		%br/
 		= f.file_field :photo
-	= validation_code
+		= recaptcha_tags
 	%p
 		= f.submit

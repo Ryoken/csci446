@@ -2,18 +2,16 @@
 	= f.error_messages
 	%p
 		= f.label :name
-		%br
 		= f.text_field :name
 	%p
 	- @num=4
 	- until @num == -1
-		= f.radio_button :rating, @num
 		= f.label get_rating(@num)
+		= f.radio_button :rating, @num
 		- @num -= 1
 		%br
 	%p
 		= f.label :author
-		%br
 		= f.select :author, User.all.collect { |u| [u.username, u.id]}, :include_blank => false, :selected => select_author
 	%p
 		= f.submit

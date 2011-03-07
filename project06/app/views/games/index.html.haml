@@ -1,12 +1,13 @@
 %h2 Games
 
-%table
-	%tr
-		%th Title
-		%th Rating
-		%th Date Added
-	- @games.each do |game|
+#list
+	%table
 		%tr
-			%td= h game.name
-			%td= get_rating(game.rating)
-			%td= get_date(game)
+			%th Title
+			%th Rating
+			%th Date Added
+		- @games.each do |game|
+			%tr{:class => cycle('list_odd', 'list_even')}
+				%td= h game.name
+				%td= get_rating(game.rating)
+				%td= get_date(game)

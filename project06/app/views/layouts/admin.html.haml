@@ -4,14 +4,18 @@
 		%meta{"http-equiv" => "content-type", "content" => "text/html;charset=UTF-8"}
 		%title Gamez
 		= stylesheet_link_tag "application"
+	#header
+		= link_to "Gamez", root_url
 	#main_view
 		#user_navigation
 			= user_nav
-		%h2 
-			= link_to "Gamez", root_url
 		%ul.menu_bar
 			%li= link_to "Games", admin_games_path
 			%li= link_to "Users", admin_users_path
 			%li= link_to "Roles", admin_roles_path
-		%p{:style => "color: green"}= notice
+		= render :partial => 'global/flash', :locals => {:flash => flash}
 		= yield
+		%br
+	#footer
+		Copyright 2011
+		= mail_to "Ryoken Graphics"

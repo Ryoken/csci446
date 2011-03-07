@@ -2,13 +2,14 @@
 	%h2
 		Users
 
-	%table
-		%tr
-		- @users.each do |user|
+	#list
+		%table
 			%tr
-				%td= user.username
-				- if permitted_to? :edit, @user
-					%td= link_to 'Edit', edit_user_path(user)
-				- if permitted_to? :destroy, @user
-					%td= link_to 'Destroy', user, :confirm => 'Are you sure?', :method => :delete
+			- @users.each do |user|
+				%tr
+					%td= user.username
+					- if permitted_to? :edit, @user
+						%td= link_to 'Edit', edit_user_path(user)
+					- if permitted_to? :destroy, @user
+						%td= link_to 'Destroy', user, :confirm => 'Are you sure?', :method => :delete
 	%p= will_paginate @articles

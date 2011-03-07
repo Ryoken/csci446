@@ -1,9 +1,11 @@
 %h2
 	Roles
 	= link_to image_tag("add.png", :border => 0), new_admin_role_path, :title => "Create a new role"
-
-%table
-	- for role in @roles
+#list
+	%table
 		%tr
-			%td=h link_to role.name, edit_admin_role_path(role)
-			%td=h link_to image_tag("delete.png", :border => 0), admin_role_path(role), :title => "Delete role", :confirm => 'Are you sure?', :method => :delete
+			%th Role
+		- for role in @roles
+			%tr{:class => cycle('list_odd', 'list_even')}
+				%td=h link_to role.name, edit_admin_role_path(role)
+				%td.delete=h link_to image_tag("delete.png", :border => 0), admin_role_path(role), :title => "Delete role", :confirm => 'Are you sure?', :method => :delete

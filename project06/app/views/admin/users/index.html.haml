@@ -1,20 +1,20 @@
-#main
-	%h2
-		= pluralize( User.count, "User")
+%h2
+	= pluralize( User.count, "User")
 
+#list
 	%table
 		%tr
 			%th Name
 			%th Username
 			%th Last Login
 			%th Number of Games
-			%th
+			%th.delete
 		- @users.each do |user|
-			%tr
+			%tr{:class => cycle('list_odd', 'list_even')}
 				%td=h link_to user.get_name, edit_admin_user_path(user)
 				%td=h user.username 
 				%td=h user.current_login_at.strftime("%b. %d, %Y - %I:%M %p")
 				%td= get_num_games(user.id)
-				%td= link_to image_tag("delete.png", :border => 0), admin_user_path(user), :title => "Delete user", :confirm => 'Are you sure?', :method => :delete
+				%td.delete= link_to image_tag("delete.png", :border => 0), admin_user_path(user), :title => "Delete user", :confirm => 'Are you sure?', :method => :delete
 
-	%p= will_paginate @articles
+%p= will_paginate @articles

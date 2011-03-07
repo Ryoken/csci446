@@ -2,13 +2,12 @@
 	= f.error_messages
 	%p
 		= f.label :name
-		%br
 		= f.text_field :name
 	%p
 	- @num=4
 	- until @num == -1
-		= f.radio_button :rating, @num
 		= f.label get_rating(@num)
+		= f.radio_button :rating, @num
 		- @num -= 1
 		%br
 	%p

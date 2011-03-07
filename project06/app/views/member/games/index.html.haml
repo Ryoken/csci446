@@ -3,15 +3,16 @@
 	= pluralize( @games.count, "Game")
 	= link_to image_tag("add.png", :border => 0), new_member_game_path, :title => "Create a new game"
 
-%table
-	%tr
-		%th Title
-		%th Rating
-		%th Date Added
-		%th
-	- @games.each do |game|
+#list
+	%table
 		%tr
-			%td=h link_to game.name, edit_member_game_path(game)
-			%td= get_rating(game.rating)
-			%td= get_date(game)
-			%td= link_to image_tag("delete.png", :border => 0), member_game_path(game), :title => "Delete game", :confirm => 'Are you sure?', :method => :delete
+			%th Title
+			%th Rating
+			%th Date Added
+			%th
+		- @games.each do |game|
+			%tr{:class => cycle('list_odd', 'list_even')}
+				%td=h link_to game.name, edit_member_game_path(game)
+				%td= get_rating(game.rating)
+				%td= get_date(game)
+				%td= link_to image_tag("delete.png", :border => 0), member_game_path(game), :title => "Delete game", :confirm => 'Are you sure?', :method => :delete
